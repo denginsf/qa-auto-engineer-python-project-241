@@ -1,3 +1,4 @@
+from gendiff import generate_diff
 import argparse
 import json
 
@@ -14,14 +15,14 @@ def get_args():
 def parse_json(file_path1, file_path2):
     parsed_file1 = json.load(open(f'gendiff/{file_path1}'))
     parsed_file2 = json.load(open(f'gendiff/{file_path2}'))
-    print(parsed_file1)
+
     return parsed_file1, parsed_file2
 
 
 def main():
     first_file, second_file = get_args()
-    parse_json(first_file, second_file)  
-
+    parsed_file1, parsed_file2 = parse_json(first_file, second_file)
+    generate_diff(parsed_file1, parsed_file2)
 
 if __name__ == "__main__":
     main()
