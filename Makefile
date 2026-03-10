@@ -1,8 +1,11 @@
 install:
 	uv sync
 
-brain-games:
+gendiff:
 	uv run gendiff
+
+lint:
+	uv run ruff check gendiff
 
 build:
 	uv build
