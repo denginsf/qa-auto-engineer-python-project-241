@@ -1,5 +1,11 @@
 def generate_diff(file1, file2):
     result = []
+    if file1 == {} and file2 == {}:
+        return '{}'
+    if file2 == {}:
+        for key, value in file1.items():
+            result.append(f'  {key}: {value}')
+        return '{\n' + '\n'.join(result) + '\n}'
     for key, value in file1.items():
         if key in file2.keys() and file2[key] == value:
             result.append(f'  {key}: {value}')
