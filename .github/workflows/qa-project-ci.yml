@@ -27,7 +27,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=qa-auto-engineer-python-project-241
+            -Dsonar.projectKey=denginsf_qa-auto-engineer-python-project-241
             -Dsonar.organization=denginsf
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.exclusions=tests/**/*
