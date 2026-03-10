@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -25,7 +27,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           args: >
             -Dsonar.projectKey=denginsf_qa-auto-engineer-python-project-241
             -Dsonar.organization=denginsf
