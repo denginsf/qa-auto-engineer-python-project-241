@@ -17,7 +17,7 @@ jobs:
         run: |
           pip install uv
           make install
-      - name: Run linter
+      - name: Run linter and pytest
         run: |
           make lint
           make test
@@ -28,5 +28,6 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=qa-auto-engineer-python-project-241
+            -Dsonar.organization=denginsf
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.exclusions=tests/**/*
