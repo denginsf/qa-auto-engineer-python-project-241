@@ -1,0 +1,10 @@
+.venv
+.coverage
+coverage.xml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
