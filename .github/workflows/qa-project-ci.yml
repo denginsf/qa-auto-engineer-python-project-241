@@ -33,4 +33,6 @@ jobs:
             -Dsonar.projectKey=denginsf_qa-auto-engineer-python-project-241
             -Dsonar.organization=denginsf
             -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.sources=gendiff
+            -Dsonar.tests=tests
             -Dsonar.exclusions=tests/**/*
