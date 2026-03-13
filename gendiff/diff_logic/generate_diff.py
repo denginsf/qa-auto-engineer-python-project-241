@@ -1,22 +1,10 @@
-def generate_diff(file1, file2):
-    result = []
-    if file1 == {} and file2 == {}:
-        return '{}'
-    if file2 == {}:
-        for key, value in file1.items():
-            result.append(f'  {key}: {value}')
-        return '{\n' + '\n'.join(result) + '\n}'
-    for key, value in file1.items():
-        if key in file2.keys() and file2[key] == value:
-            result.append(f'  {key}: {value}')
-        elif key in file2.keys() and file2[key] != value:
-            result.append(f'- {key}: {value}')
-            result.append(f'+ {key}: {file2[key]}')
-        elif key not in file2.keys():
-            result.append(f'- {key}: {value}')
-    for key2, value2 in file2.items():
-        if key2 not in file1.keys():
-            result.append(f'+ {key2}: {file2[key2]}')
-    diff = f'{{\n  {'\n  '.join(result)}\n}}'
-    print(diff)
-    return diff
+from gendiff.diff_logic.parser import parse_files
+from gendiff.diff_logic.diff_return import diff_return
+from gendiff.diff_logic.stylish import stylish
+
+
+def generate_diff(file1, file2, formatter='stylish'):
+    parsed_file1, parsed_file2 = parse_files(file1, file2)
+    diff = diff_return(parsed_file1, parsed_file2)
+    if formatter == 'stylish':
+        return stylish(diff)

@@ -19,5 +19,5 @@ def parse_files(file_name1, file_name2):
     return parsed_file1, parsed_file2
 
 
-if __name__ == "__main__":
-    parse_files('file1.json', 'file2.json')
+
+

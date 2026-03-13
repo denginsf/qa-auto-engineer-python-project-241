@@ -1,4 +1,4 @@
-from gendiff import generate_diff
+from gendiff import stylish
 from pathlib import Path
 import json
 
