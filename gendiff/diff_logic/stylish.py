@@ -1,6 +1,6 @@
 def stylish(diff_data):
     result = []
-    if diff_data == {}:
+    if diff_data == []:
         return '{}'
     for item in diff_data:
         if item['status'] == 'unchanged':

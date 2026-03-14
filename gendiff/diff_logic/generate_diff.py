@@ -1,5 +1,5 @@
-from gendiff.diff_logic.parser import parse_files
 from gendiff.diff_logic.diff_return import diff_return
+from gendiff.diff_logic.parser import parse_files
 from gendiff.diff_logic.stylish import stylish
 
 

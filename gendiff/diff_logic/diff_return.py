@@ -1,10 +1,11 @@
 def diff_return(file1, file2):
+    if file1 is None:
+        file1 = {}
+    if file2 is None:
+        file2 = {}
     diff = []
     if file1 == {} and file2 == {}:
-        return {}
-    if file2 == {}:
-        for key, value in file1.items():
-            diff.append({'key': key, 'status': 'unchanged', 'value': value})
+        return []
     for key, value in file1.items():
         if key in file2.keys() and file2[key] == value:
             diff.append({'key': key, 'status': 'unchanged', 'value': value})

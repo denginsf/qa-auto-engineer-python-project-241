@@ -1,4 +1,5 @@
 import argparse
+import os
 
 from gendiff import generate_diff
 
@@ -17,6 +18,7 @@ def main():
     first_file, second_file = get_args()
     generate_diff(first_file, second_file)
     print(generate_diff(first_file, second_file))
+
 
 if __name__ == "__main__":
     main()
