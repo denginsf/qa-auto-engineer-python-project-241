@@ -6,6 +6,10 @@
 
 [![asciicast](https://asciinema.org/a/zKIGVjUkLPHqPrBT.svg)](https://asciinema.org/a/zKIGVjUkLPHqPrBT)
 
-## Plain JSON diff + YAML diff
+## Stylish formatter JSON diff + YAML diff
 
 [![asciicast](https://asciinema.org/a/IJoYnd228mE10NV5.svg)](https://asciinema.org/a/IJoYnd228mE10NV5)
+
+## Plain Formatter
+
+[![asciicast](https://asciinema.org/a/7chQYaMaPzn88E0x.svg)](https://asciinema.org/a/7chQYaMaPzn88E0x)
