@@ -3,14 +3,14 @@ def stylish(diff_data):
     if diff_data == []:
         return '{}'
     for item in diff_data:
-        if item['status'] == 'unchanged':
+        if item['type'] == 'unchanged':
             result.append(f'  {item['key']}: {item['value']}')
-        elif item['status'] == 'changed':
+        elif item['type'] == 'changed':
             result.append(f'- {item['key']}: {item['old_value']}')
             result.append(f'+ {item['key']}: {item['new_value']}')
-        elif item['status'] == 'removed':
+        elif item['type'] == 'removed':
             result.append(f'- {item['key']}: {item['value']}')
-        elif item['status'] == 'added':
+        elif item['type'] == 'added':
             result.append(f'+ {item['key']}: {item['value']}')
     stylish_diff = f'{{\n  {'\n  '.join(result)}\n}}'
     return stylish_diff

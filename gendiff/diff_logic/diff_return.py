@@ -18,7 +18,9 @@ def diff_return(file1, file2):
                 diff.append({'key': key, 'type': 'nested', 'children': child})
             else:
                 if extra_file1 == extra_file2:
-                    diff.append({'key': key, 'type': 'unchanged', 'value': extra_file1})
+                    diff.append({'key': key, 'type': 'unchanged',
+                    'value': extra_file1})
                 elif extra_file1 != extra_file2:
-                    diff.append({'key': key, 'type': 'changed', 'old_value': extra_file1, 'new_value': extra_file2})
+                    diff.append({'key': key, 'type': 'changed', 
+                    'old_value': extra_file1, 'new_value': extra_file2})
     return diff
