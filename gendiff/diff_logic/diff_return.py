@@ -4,17 +4,21 @@ def diff_return(file1, file2):
     if file2 is None:
         file2 = {}
     diff = []
-    if file1 == {} and file2 == {}:
-        return []
-    for key, value in file1.items():
-        if key in file2.keys() and file2[key] == value:
-            diff.append({'key': key, 'status': 'unchanged', 'value': value})
-        elif key in file2.keys() and file2[key] != value:
-            diff.append({'key': key, 'status': 'changed', 'old_value': value,
-            'new_value': file2[key]})
-        elif key not in file2.keys():
-            diff.append({'key': key, 'status': 'removed', 'value': value})
-    for key2, value2 in file2.items():
-        if key2 not in file1.keys():
-            diff.append({'key': key2, 'status': 'added', 'value': value2})
+    all_keys = sorted(set(file1.keys()) | set(file2.keys()))
+    for key in all_keys:
+        if key not in file2.keys():
+            diff.append({'key': key, 'type': 'removed', 'value': file1[key]})
+        elif key not in file1.keys():
+            diff.append({'key': key, 'type': 'added', 'value': file2[key]})
+        else:
+            extra_file1 = file1[key]
+            extra_file2 = file2[key]
+            if isinstance(extra_file1, dict) and isinstance(extra_file2, dict):
+                child = diff_return(extra_file1, extra_file2)
+                diff.append({'key': key, 'type': 'nested', 'children': child})
+            else:
+                if extra_file1 == extra_file2:
+                    diff.append({'key': key, 'type': 'unchanged', 'value': extra_file1})
+                elif extra_file1 != extra_file2:
+                    diff.append({'key': key, 'type': 'changed', 'old_value': extra_file1, 'new_value': extra_file2})
     return diff
