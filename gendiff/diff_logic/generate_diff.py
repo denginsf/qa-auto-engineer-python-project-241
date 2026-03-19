@@ -15,4 +15,4 @@ def generate_diff(file1, file2, format='stylish'):
     if format == 'plain':
         return plain(diff)
     if format == 'json':
-        return json.dumps(json_format(diff), indent=2)
+        return json.dumps(json_format(diff), indent=2, ensure_ascii=False)

@@ -1,0 +1,25 @@
+{
+  "id": 1234,
+  "name": "Иван Петров-Сидоров",
+  "address": {
+    "city": "Санкт-Петербург",
+    "street": "Невский проспект",
+    "building": 10
+  },
+  "contacts": {
+    "email": "ivan@example.com",
+    "phone": "+7-999-123-45-67",
+    "social": {
+      "telegram": "@ivan",
+      "github": "ivan-dev"
+    }
+  },
+  "settings": {
+    "theme": "dark",
+    "notifications": true,
+    "language": "ru"
+  },
+  "isActive": true,
+  "tags": ["developer", "python"],
+  "rating": 4.8
+}

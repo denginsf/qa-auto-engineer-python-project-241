@@ -1,0 +1,90 @@
+{
+  "address": {
+    "apartment": {
+      "diff": "added",
+      "value": 42
+    },
+    "building": 10,
+    "city": {
+      "diff": "changed",
+      "old_value": "Санкт-Петербург",
+      "new_value": "Москва"
+    },
+    "street": {
+      "diff": "changed",
+      "old_value": "Невский проспект",
+      "new_value": "Тверская улица"
+    }
+  },
+  "contacts": {
+    "email": {
+      "diff": "changed",
+      "old_value": "ivan@example.com",
+      "new_value": "ivan.petrov@example.com"
+    },
+    "phone": {
+      "diff": "removed",
+      "value": "+7-999-123-45-67"
+    },
+    "social": {
+      "github": {
+        "diff": "changed",
+        "old_value": "ivan-dev",
+        "new_value": "ivan-petrov-dev"
+      },
+      "linkedin": {
+        "diff": "added",
+        "value": "ivan-petrov"
+      },
+      "telegram": {
+        "diff": "changed",
+        "old_value": "@ivan",
+        "new_value": "@ivan_petrov"
+      }
+    }
+  },
+  "id": {
+    "diff": "changed",
+    "old_value": 1234,
+    "new_value": 12345
+  },
+  "isActive": {
+    "diff": "changed",
+    "old_value": true,
+    "new_value": false
+  },
+  "name": "Иван Петров-Сидоров",
+  "newField": {
+    "diff": "added",
+    "value": "added value"
+  },
+  "rating": {
+    "diff": "changed",
+    "old_value": 4.8,
+    "new_value": 4.9
+  },
+  "settings": {
+    "language": "ru",
+    "notifications": {
+      "diff": "removed",
+      "value": true
+    },
+    "theme": {
+      "diff": "changed",
+      "old_value": "dark",
+      "new_value": "light"
+    }
+  },
+  "tags": {
+    "diff": "changed",
+    "old_value": [
+      "developer",
+      "python"
+    ],
+    "new_value": [
+      "developer",
+      "python",
+      "backend"
+    ]
+  }
+}

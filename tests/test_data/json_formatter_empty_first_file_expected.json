@@ -1,0 +1,57 @@
+{
+  "address": {
+    "diff": "added",
+    "value": {
+      "city": "Москва",
+      "street": "Тверская улица",
+      "building": 10,
+      "apartment": 42
+    }
+  },
+  "contacts": {
+    "diff": "added",
+    "value": {
+      "email": "ivan.petrov@example.com",
+      "social": {
+        "telegram": "@ivan_petrov",
+        "github": "ivan-petrov-dev",
+        "linkedin": "ivan-petrov"
+      }
+    }
+  },
+  "id": {
+    "diff": "added",
+    "value": 12345
+  },
+  "isActive": {
+    "diff": "added",
+    "value": false
+  },
+  "name": {
+    "diff": "added",
+    "value": "Иван Петров-Сидоров"
+  },
+  "newField": {
+    "diff": "added",
+    "value": "added value"
+  },
+  "rating": {
+    "diff": "added",
+    "value": 4.9
+  },
+  "settings": {
+    "diff": "added",
+    "value": {
+      "theme": "light",
+      "language": "ru"
+    }
+  },
+  "tags": {
+    "diff": "added",
+    "value": [
+      "developer",
+      "python",
+      "backend"
+    ]
+  }
+}

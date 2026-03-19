@@ -1,0 +1,26 @@
+{
+  "id": 12345,
+  "name": "Иван Петров-Сидоров",
+  "address": {
+    "city": "Москва",
+    "street": "Тверская улица",
+    "building": 10,
+    "apartment": 42
+  },
+  "contacts": {
+    "email": "ivan.petrov@example.com",
+    "social": {
+      "telegram": "@ivan_petrov",
+      "github": "ivan-petrov-dev",
+      "linkedin": "ivan-petrov"
+    }
+  },
+  "settings": {
+    "theme": "light",
+    "language": "ru"
+  },
+  "isActive": false,
+  "tags": ["developer", "python", "backend"],
+  "rating": 4.9,
+  "newField": "added value"
+}

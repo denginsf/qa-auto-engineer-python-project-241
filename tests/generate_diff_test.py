@@ -118,7 +118,6 @@ def test_plain_formatter_plain_json_files():
     assert actual == expected
 
 # YAML тесты plain formatter
-# Еще проверяею расширение .yml .yaml
 
 
 def test_plain_formatter_full_diff_plain_yaml():
@@ -150,4 +149,74 @@ def test__plain_formatter_empty_files_plain_yaml():
     file2 = str(get_test_data_path('empty_yaml.yml'))
     expected = read_file("plain_formatter_empty_files_expected.txt")
     actual = generate_diff(file1, file2, 'plain')
+    assert actual == expected
+
+
+# JSON форматтер
+
+
+def test_json_formatter_full_diff():
+    file1 = str(get_test_data_path('json_formatter_first_file.json'))
+    file2 = str(get_test_data_path('json_formatter_second_file.json'))
+    expected = read_file("json_formatter_expected_result.json")
+    actual = generate_diff(file1, file2, 'json')
+    assert expected == actual
+
+
+def test_json_formatter_empty_first_file():
+    file1 = str(get_test_data_path('empty_json.json'))
+    file2 = str(get_test_data_path('json_formatter_second_file.json'))
+    expected = read_file("json_formatter_empty_first_file_expected.json")
+    actual = generate_diff(file1, file2, 'json')
+    assert actual == expected
+
+
+def test_json_formatter_empty_second_file():
+    file1 = str(get_test_data_path('json_formatter_first_file.json'))
+    file2 = str(get_test_data_path('empty_json.json'))
+    expected = read_file("json_formatter_empty_second_file_expected.json")
+    actual = generate_diff(file1, file2, 'json')
+    assert expected == actual
+
+
+def test_json_formatter_json_empty_files():
+    file1 = str(get_test_data_path('empty_json.json'))
+    file2 = str(get_test_data_path('empty_json.json'))
+    expected = read_file("empty_files_expected.txt")
+    actual = generate_diff(file1, file2, 'json')
+    assert actual == expected
+
+# YAML JSON-форматтер
+
+
+def test_json_formatter_full_diff_yaml():
+    file1 = str(get_test_data_path('json_formatter_first_file.yml'))
+    file2 = str(get_test_data_path('json_formatter_second_file.yml'))
+    expected = read_file("json_formatter_expected_result.json")
+    actual = generate_diff(file1, file2, 'json')
+    print(generate_diff(file1, file2, 'json'))
+    assert actual == expected
+
+
+def test_json_formatter_empty_first_file_yaml():
+    file1 = str(get_test_data_path('empty_yaml.yml'))
+    file2 = str(get_test_data_path('json_formatter_second_file.yml'))
+    expected = read_file("json_formatter_empty_first_file_expected.json")
+    actual = generate_diff(file1, file2, 'json')
+    assert actual == expected
+
+
+def test_json_formatter_empty_second_file_yaml():
+    file1 = str(get_test_data_path('json_formatter_first_file.yml'))
+    file2 = str(get_test_data_path('empty_yaml.yml'))
+    expected = read_file("json_formatter_empty_second_file_expected.json")
+    actual = generate_diff(file1, file2, 'json')
+    assert actual == expected
+
+
+def test_json_formatter_empty_files_yaml():
+    file1 = str(get_test_data_path('empty_yaml.yml'))
+    file2 = str(get_test_data_path('empty_yaml.yml'))
+    expected = read_file("empty_files_expected.txt")
+    actual = generate_diff(file1, file2, 'json')
     assert actual == expected

@@ -1,0 +1,52 @@
+{
+  "address": {
+    "diff": "removed",
+    "value": {
+      "city": "Санкт-Петербург",
+      "street": "Невский проспект",
+      "building": 10
+    }
+  },
+  "contacts": {
+    "diff": "removed",
+    "value": {
+      "email": "ivan@example.com",
+      "phone": "+7-999-123-45-67",
+      "social": {
+        "telegram": "@ivan",
+        "github": "ivan-dev"
+      }
+    }
+  },
+  "id": {
+    "diff": "removed",
+    "value": 1234
+  },
+  "isActive": {
+    "diff": "removed",
+    "value": true
+  },
+  "name": {
+    "diff": "removed",
+    "value": "Иван Петров-Сидоров"
+  },
+  "rating": {
+    "diff": "removed",
+    "value": 4.8
+  },
+  "settings": {
+    "diff": "removed",
+    "value": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "ru"
+    }
+  },
+  "tags": {
+    "diff": "removed",
+    "value": [
+      "developer",
+      "python"
+    ]
+  }
+}
