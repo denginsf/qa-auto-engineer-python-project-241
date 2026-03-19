@@ -1,3 +1,6 @@
+from gendiff.formatters.bool_format import bool_format_value
+
+
 def plain(diff_data):
     result = []
     if diff_data == []:
@@ -5,11 +8,12 @@ def plain(diff_data):
     for item in diff_data:
         if item['type'] == 'changed':
             result.append(f"Property '{item['key']}' was updated. "
-                        f"From {item['old_value']} to {item['new_value']}")
+                        f"From {bool_format_value(item['old_value'])} to \
+{bool_format_value(item['new_value'])}")
         elif item['type'] == 'removed':
             result.append(f"Property '{item['key']}' was removed")
         elif item['type'] == 'added':
             result.append(f"Property '{item['key']}' was added. " 
-                        f"With value: {item['value']}")
+                        f"With value: {bool_format_value(item['value'])}")
     plain_diff = f'{'\n'.join(result)}'
     return plain_diff
