@@ -13,7 +13,7 @@ def plain(diff_data):
         elif item['type'] == 'removed':
             result.append(f"Property '{item['key']}' was removed")
         elif item['type'] == 'added':
-            result.append(f"Property '{item['key']}' was added. " 
-                        f"With value: {bool_format_value(item['value'])}")
+            result.append(f"Property '{item['key']}' was added \
+with value: {bool_format_value(item['value'])}")
     plain_diff = f'{'\n'.join(result)}'
     return plain_diff
