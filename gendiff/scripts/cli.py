@@ -16,12 +16,8 @@ def get_args():
 
 def main():
     first_file, second_file, format_name = get_args()
-    base_path = \
-    '/Users/alekseidengin/qa-auto-engineer-python-project-241/tests/files_for_script_run'
-    first_path = f'{base_path}/{first_file}'
-    second_path = f'{base_path}/{second_file}'
-    generate_diff(first_path, second_path, format_name)
-    print(generate_diff(first_path, second_path, format_name))
+    generate_diff(first_file, second_file, format_name)
+    print(generate_diff(first_file, second_file, format_name))
 
 
 if __name__ == "__main__":
